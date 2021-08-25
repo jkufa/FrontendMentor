@@ -8,32 +8,44 @@ body {
   background-size: contain;
   font-family: 'Red Hat Display';
   font-weight: 500;
-}
-
-h1 {
-  font-weight: 900;
-}
-
-p {
-  font-weight: 500;
-  margin: 3rem;
+  margin: 0;
+  padding: 0;
 }
 
 .card-container {
   display: grid;
-  justify-content: center;
-  align-content: center;
+  justify-items: center;
+  align-items: center;
   text-align: center;
+  grid-template-rows: 98vh;
 }
 
 .card {
-  max-width:450px;
+  max-width: calc(100vw/5);
+  min-width: 500px;
   border-radius: 20px;
   background-color: hsl(225, 100%, 98%);
+  overflow: hidden;
+  box-shadow: 0 1rem 1.8rem hsla(224, 23%, 55%, 0.342);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h1 {
+  font-weight: 900;
+  margin-top: 2rem;
+}
+
+.card p {
+  font-weight: 500;
+  margin: 1rem 3rem;
+  color: #757C96;
 }
 
 .plan-container {
-  padding: 3rem;
+  padding: 1rem 3rem;
 }
 
 .plan {
@@ -43,8 +55,15 @@ p {
   border-radius: 20px;
 }
 .plan img {
+  max-width: 3vw;
   flex-grow: 1;
   padding: 25px;
+}
+
+.plan a {
+  flex-grow: 1;
+  font-weight: 700;
+  color: hsl(245, 75%, 52%);
 }
 
 .plan-text {
@@ -54,12 +73,50 @@ p {
 }
 
 .plan-text h3 {
-  font-weight: 700;
+  font-weight: 900;
   margin: 0;
 }
-
-
-.plan a {
-  flex-grow: 1;
+.plan-text span {
+  color: #757C96;
 }
 
+.btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.submit {
+  color:hsl(225, 100%, 98%);
+  background: hsl(245, 75%, 52%);
+  box-shadow: 0 1rem 1.8rem hsla(245, 75%, 52%, 0.308);
+  margin: 2rem 0;
+  font-size: 16px;
+}
+
+.submit:hover {
+  background: #1E1FCD;
+  transition: ease-in 130ms;
+}
+
+.cancel {
+  background: none;
+  font-weight: 900;
+  color: #757C96;
+  padding-bottom: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cancel:hover {
+  text-decoration: underline;
+  transition: ease-in 130ms;
+}
